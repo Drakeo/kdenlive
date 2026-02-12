@@ -72,6 +72,7 @@ frei0r_measure_pr0file.xml
 frei0r_mask0mate.xml
 frei0r_medians.xml
 frei0r_mirr0r.xml
+frei0r_ndvi.xml
 frei0r_nervous.xml
 frei0r_ntsc.xml
 frei0r_normaliz0r.xml
