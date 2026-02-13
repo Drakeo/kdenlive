@@ -1759,6 +1759,8 @@ function getTrackColor(audio, header) {
                         clip: true
                         interactive: false
                         pixelAligned: true
+                        property int firstVisibleFrame: Math.floor(scrollView.contentX / root.timeScale)
+                        property int lastVisibleFrame: firstVisibleFrame + Math.ceil(scrollView.width / root.timeScale)
                         onContentXChanged: {
                             timeline.setTimelineMouseOffset(scrollView.contentX - root.headerWidth)
                         }
