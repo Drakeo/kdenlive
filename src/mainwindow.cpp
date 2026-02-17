@@ -2127,6 +2127,8 @@ void MainWindow::setupActions()
               QIcon::fromTheme(QStringLiteral("bookmarks")), Qt::Key_G);
     addAction(QStringLiteral("delete_sequence_marker"), i18n("Delete Timeline Marker"), this, SLOT(slotDeleteGuide()),
               QIcon::fromTheme(QStringLiteral("bookmark-remove")));
+    addAction(QStringLiteral("delete_all_sequence_markers"), i18n("Delete All Timeline Markers"), this, SLOT(slotDeleteAllSequenceMarkers()),
+              QIcon::fromTheme(QStringLiteral("edit-delete")));
     addAction(QStringLiteral("edit_sequence_marker"), i18n("Edit Timeline Marker…"), this, SLOT(slotEditGuide()),
               QIcon::fromTheme(QStringLiteral("bookmark-edit")));
 
@@ -2134,7 +2136,7 @@ void MainWindow::setupActions()
     addAction(QStringLiteral("search_guide"), i18n("Search Marker…"), this, SLOT(slotSearchGuide()), QIcon::fromTheme(QStringLiteral("edit-find")));
 
     QAction *lockGuides =
-        addAction(QStringLiteral("lock_guides"), i18n("Timeline Markers Locked"), this, SLOT(slotLockGuides(bool)), QIcon::fromTheme(QStringLiteral("lock")));
+        addAction(QStringLiteral("lock_guides"), i18n("Lock Timeline Markers"), this, SLOT(slotLockGuides(bool)), QIcon::fromTheme(QStringLiteral("lock")));
     lockGuides->setCheckable(true);
     lockGuides->setChecked(KdenliveSettings::lockedGuides());
     lockGuides->setToolTip(i18n("Lock Timeline Markers"));
@@ -3069,6 +3071,16 @@ void MainWindow::slotDeleteAllClipMarkers()
         return;
     }
     bool ok = clip->getMarkerModel()->removeAllMarkers();
+    if (!ok) {
+        m_messageLabel->setMessage(i18n("An error occurred while deleting markers"), ErrorMessage);
+        return;
+    }
+}
+
+void MainWindow::slotDeleteAllSequenceMarkers()
+{
+    auto model = pCore->currentDoc()->getGuideModel(pCore->currentTimelineId());
+    bool ok = model->removeAllMarkers();
     if (!ok) {
         m_messageLabel->setMessage(i18n("An error occurred while deleting markers"), ErrorMessage);
         return;

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="kdenlive" version="247" translationDomain="kdenlive">
+<kpartgui name="kdenlive" version="248" translationDomain="kdenlive">
   <MenuBar>
     <Menu name="file">
       <Action name="file_new"/>
@@ -329,6 +329,7 @@
       <Action name="add_sequence_marker"/>
       <Action name="edit_sequence_marker"/>
       <Action name="delete_sequence_marker"/>
+      <Action name="delete_all_sequence_markers"/>
       <Action name="lock_guides"/>
       <Separator/>
       <Action name="search_guide"/>
