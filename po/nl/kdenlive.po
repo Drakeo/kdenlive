@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-16 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 14:23+0100\n"
+"PO-Revision-Date: 2026-02-16 10:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -33316,10 +33316,9 @@ msgid "Disable clip"
 msgstr "Clip uitschakelen"
 
 #: src/timeline2/model/timelinefunctions.cpp:1159
-#, fuzzy, kde-format
-#| msgid "Cannot create clip"
+#, kde-format
 msgid "Cannot change clip state"
-msgstr "Kan clip niet aanmaken"
+msgstr "Kan status van clip niet wijzigen"
 
 #: src/timeline2/model/timelinefunctions.cpp:1188
 #, kde-format

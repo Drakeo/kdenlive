@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-16 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 05:32+0100\n"
+"PO-Revision-Date: 2026-02-16 02:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16458,12 +16458,12 @@ msgstr "მოძველებულია"
 #: data/profiles.xml:4
 #, kde-format
 msgid "Generic (HD for web, mobile devices...)"
-msgstr ""
+msgstr "ზოგადი (HD ვებისთვის, მობილური მოწყობილობებისთვის...)"
 
 #: data/profiles.xml:27
 #, kde-format
 msgid "Ultra-High Definition (4K)"
-msgstr ""
+msgstr "ულტრა მაღალი გარჩევადობა (4K)"
 
 #: data/profiles.xml:43
 #, kde-format
@@ -16473,7 +16473,7 @@ msgstr "ვიდეო ალფა არხით"
 #: data/profiles.xml:58
 #, kde-format
 msgid "Old-TV definition (DVD...)"
-msgstr ""
+msgstr "ძველი ტელევიზორის გარჩევადობა (DVD...)"
 
 #: data/profiles.xml:75
 #, kde-format
@@ -32523,10 +32523,9 @@ msgid "Disable clip"
 msgstr "კლიპის გათიშვა"
 
 #: src/timeline2/model/timelinefunctions.cpp:1159
-#, fuzzy, kde-format
-#| msgid "Cannot create clip"
+#, kde-format
 msgid "Cannot change clip state"
-msgstr "კლიპის შექმნის შეცდომა"
+msgstr "კლიპის მდგომარეობის შეცვლა შეუძლებელია"
 
 #: src/timeline2/model/timelinefunctions.cpp:1188
 #, kde-format
@@ -36229,7 +36228,7 @@ msgstr "ავტოგადახვევა დაკვრისას"
 #: src/ui/configtimeline_ui.ui:122
 #, kde-format
 msgid "Fixed centered playhead"
-msgstr ""
+msgstr "გასწორდა ცენტრში დაკვრა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_scrollvertically)
 #: src/ui/configtimeline_ui.ui:129

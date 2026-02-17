@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-16 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 18:07+0300\n"
+"PO-Revision-Date: 2026-02-16 16:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "Language: tr\n"
@@ -33148,10 +33148,9 @@ msgid "Disable clip"
 msgstr "Klibi Devre Dışı Bırak"
 
 #: src/timeline2/model/timelinefunctions.cpp:1159
-#, fuzzy, kde-format
-#| msgid "Cannot create clip"
+#, kde-format
 msgid "Cannot change clip state"
-msgstr "Klip oluşturulamıyor"
+msgstr "Klip durumu değiştirilemiyor"
 
 #: src/timeline2/model/timelinefunctions.cpp:1188
 #, kde-format

@@ -11247,10 +11247,9 @@ msgid "This filter creates a false image from a visible + infrared source"
 msgstr ""
 
 #: data/effects/frei0r/frei0r_ndvi.xml:8
-#, fuzzy, kde-format
-#| msgid "Color Matrix"
+#, kde-format
 msgid "Color Map"
-msgstr "Matice barev"
+msgstr "Barevná mapa"
 
 #: data/effects/frei0r/frei0r_ndvi.xml:9
 #, kde-format
@@ -11352,10 +11351,9 @@ msgid "NDVI,VI"
 msgstr ""
 
 #: data/effects/frei0r/frei0r_ndvi.xml:49
-#, fuzzy, kde-format
-#| msgid "Legend unit"
+#, kde-format
 msgid "Legend"
-msgstr "Jednotky vysvětlivek"
+msgstr "Vysvětlivky"
 
 #: data/effects/frei0r/frei0r_ndvi.xml:50
 #, kde-format
