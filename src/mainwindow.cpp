@@ -491,13 +491,6 @@ void MainWindow::init()
         cleanHistory->setDisabled(isClean);
     });
 
-    // Color and icon theme stuff
-    QStringList stylesToHide = {
-        QStringLiteral("windowsvista"), // recoloring does not work well
-        QStringLiteral("Windows"),
-        // QStringLiteral("macintosh")
-    };
-
     // Switch title bars
     auto switchAction = new QAction(i18n("Show Title Bars"), this);
     switchAction->setCheckable(true);
@@ -512,6 +505,12 @@ void MainWindow::init()
     QAction *stylesAction = KStyleManager::createConfigureAction(this);
     // stylesAction->menu() is only available on non KDE platform
     if (stylesAction->menu()) {
+        // Color and icon theme stuff
+        const QStringList stylesToHide = {
+            QStringLiteral("windowsvista"), // recoloring does not work well
+            QStringLiteral("Windows"),
+            // QStringLiteral("macintosh")
+        };
         for (QAction *child : stylesAction->menu()->actions()) {
             if (stylesToHide.contains(child->data().toString(), Qt::CaseInsensitive)) {
                 child->setVisible(false);

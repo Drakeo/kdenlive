@@ -348,6 +348,24 @@ void KdenliveSettingsDialog::initEnviromentPage()
     }
     connect(m_configEnv.kcfg_videotodefaultfolder, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KdenliveSettingsDialog::slotEnableVideoFolder);
 
+    // Window drag behavior on non KDE desktops
+    if (qgetenv("XDG_CURRENT_DESKTOP") == QLatin1String("KDE")) {
+        m_configEnv.dragFromTitlebarOnly->setVisible(false);
+    } else {
+        auto cfg = KSharedConfig::openConfig(QStringLiteral("breezerc"), KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation);
+        KConfigGroup group(cfg, "Style");
+        if (group.readEntry(QStringLiteral("WindowDragMode")) == QLatin1String("WD_NONE")) {
+            m_configEnv.dragFromTitlebarOnly->setChecked(true);
+            m_breezeDragFromTitlebarOnly = true;
+        }
+        KSharedConfigPtr config = KSharedConfig::openConfig();
+        KConfigGroup settingsGroup(config, "KDE");
+        const QString currentStyle = settingsGroup.readEntry(QStringLiteral("widgetStyle")).toLower();
+        if (!currentStyle.isEmpty() && currentStyle != QLatin1String("breeze")) {
+            m_configEnv.dragFromTitlebarOnly->setEnabled(false);
+        }
+    }
+
     // Mime types
     QStringList mimes = FileFilter::getExtensions();
     std::sort(mimes.begin(), mimes.end());
@@ -363,6 +381,23 @@ void KdenliveSettingsDialog::initEnviromentPage()
     // Power management not implemented on Mac
     m_configEnv.kcfg_usePowerManagement->setEnabled(false);
 #endif
+}
+
+void KdenliveSettingsDialog::slotUpdateBreezeDrag(bool dragOnTitleBar)
+{
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("breezerc"), KConfig::SimpleConfig, QStandardPaths::GenericConfigLocation);
+    KConfigGroup group(cfg, "Style");
+    if (!dragOnTitleBar) {
+        // Revert to default behavior
+        group.deleteEntry(QStringLiteral("WindowDragMode"));
+    } else {
+        // Drag through title bar only
+        group.writeEntry(QStringLiteral("WindowDragMode"), QStringLiteral("WD_NONE"));
+    }
+    cfg->sync();
+    // Ensure Breeze style directly updates its configuration
+    QEvent event(QEvent::ApplicationPaletteChange);
+    qApp->sendEvent(qApp, &event);
 }
 
 void KdenliveSettingsDialog::initCapturePage()
@@ -1157,6 +1192,11 @@ void KdenliveSettingsDialog::updateSettings()
     string = m_tlPreviewProfiles->currentExtension();
     if (string != KdenliveSettings::previewextension()) {
         KdenliveSettings::setPreviewextension(string);
+    }
+
+    // Breeze drag
+    if (m_configEnv.dragFromTitlebarOnly->isChecked() != m_breezeDragFromTitlebarOnly) {
+        slotUpdateBreezeDrag(m_configEnv.dragFromTitlebarOnly->isChecked());
     }
 
     // Autosave

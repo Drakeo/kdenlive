@@ -84,6 +84,8 @@ private Q_SLOTS:
     /** @brief Open an external browser window */
     void openBrowserUrl(const QString &url);
     void loadExternalProxyProfiles();
+    /** @brief Enable/disable Breeze drag window from empty areas behavior */
+    void slotUpdateBreezeDrag(bool dragOnTitleBar);
 
 private:
     KPageWidgetItem *m_pageMisc;
@@ -116,6 +118,7 @@ private:
     bool m_modified;
     bool m_shuttleModified;
     bool m_voskUpdated;
+    bool m_breezeDragFromTitlebarOnly{false};
 
     QMap<QString, QString> m_mappable_actions;
     QVector<QComboBox *> m_shuttle_buttons;
