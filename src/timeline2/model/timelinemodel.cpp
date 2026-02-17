@@ -1986,8 +1986,8 @@ bool TimelineModel::requestClipInsertion(const QString &binClipId, int trackId, 
         QList<int> keys = m_binAudioTargets.keys();
         if (!useTargets) {
             // Drag and drop, calculate target tracks
+            keys = master->activeStreams().keys();
             if (audioDrop) {
-                keys = master->activeStreams().keys();
                 if (keys.count() > 1) {
                     // Dropping a clip with several audio streams
                     int tracksBelow = getLowerTracksId(trackId, TrackType::AudioTrack).count();
@@ -2019,7 +2019,6 @@ bool TimelineModel::requestClipInsertion(const QString &binClipId, int trackId, 
                         audioTids = getLowerTracksId(mirror, TrackType::AudioTrack);
                     }
                 }
-                // keys = master->activeStreams().keys();
                 if (audioTids.count() < keys.count() - 1 || (mirror == -1 && !keys.isEmpty())) {
                     // Check if project has enough audio tracks
                     if (keys.count() > getTracksIds(true).count()) {

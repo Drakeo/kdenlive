@@ -421,6 +421,8 @@ public:
 
 public Q_SLOTS:
     const QString slotUrlsDropped(const QList<QUrl> urls, const QModelIndex parent);
+
+private Q_SLOTS:
     void slotAddClip();
     /** @brief Reload clip from disk */
     void slotReloadClip();
