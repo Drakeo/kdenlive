@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:44+0000\n"
-"PO-Revision-Date: 2026-02-16 10:31+0100\n"
+"POT-Creation-Date: 2026-02-19 00:44+0000\n"
+"PO-Revision-Date: 2026-02-18 13:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -4210,24 +4210,13 @@ msgstr ""
 "predeterminat és 10."
 
 #: data/effects/avfilter/avfilter_gradfun.xml:4
-#, fuzzy, kde-format
-#| msgid "gradfun"
+#, kde-format
 msgid "Gradfun"
-msgstr "gradfun"
+msgstr "Gradfun"
 
 # skip-rule: t-pu_sp
 #: data/effects/avfilter/avfilter_gradfun.xml:8
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>-= Deprecated =-</b><br>\n"
-#| "    Debands video quickly using gradients.<br>\n"
-#| "    Fix the banding artifacts that are sometimes introduced into nearly "
-#| "flat regions by truncation to 8-bit color depth.<br>\n"
-#| "    Interpolate the gradients that should go where the bands are, and "
-#| "dither them.<br>\n"
-#| "    <b>It is designed for playback only. Do not use it prior to lossy "
-#| "compression, because compression tends to lose the dither and bring back "
-#| "the bands</b>."
+#, kde-format
 msgid ""
 "Debands video quickly using gradients.<br>\n"
 "    Fix the banding artifacts that are sometimes introduced into nearly flat "
@@ -4238,15 +4227,14 @@ msgid ""
 "compression, because compression tends to lose the dither and bring back the "
 "bands</i></b>."
 msgstr ""
-"</b>-= Obsolet =-</b><br>\n"
-"    Treu els defectes de bandes ràpidament emprant degradats.<br>\n"
+"Treu els defectes de bandes ràpidament emprant degradats.<br>\n"
 "    Corregeix els defectes de bandes que de vegades es presenten en regions "
 "gairebé llises per truncament a la profunditat de color de 8 bits.<br>\n"
 "    Interpola els degradats que haurien d'anar on estan les bandes, i els "
-"trama.<br>\n"
-"    <b>Està dissenyat només per a reproducció. No l'utilitzeu abans de la "
+"trama.<br><br>\n"
+"    <b><i>Està dissenyat només per a reproducció. No l'utilitzeu abans de la "
 "compressió amb pèrdua, ja que la compressió tendeix a perdre el tramat i a "
-"retornar les bandes</b>."
+"retornar les bandes</i></b>."
 
 #: data/effects/avfilter/avfilter_gradfun.xml:13
 #, kde-format
@@ -18554,7 +18542,7 @@ msgid "Delete keyframes"
 msgstr "Suprimeix els fotogrames clau"
 
 #: src/assets/keyframes/model/keyframemodellist.cpp:701
-#: src/assets/model/assetparametermodel.cpp:1764
+#: src/assets/model/assetparametermodel.cpp:1784
 #, kde-format
 msgid "Update effect"
 msgstr "Actualitza l'efecte"
@@ -18631,13 +18619,13 @@ msgstr "Edita el fotograma clau %1"
 msgid "Update %1"
 msgstr "Actualitza el %1"
 
-#: src/assets/model/assetparametermodel.cpp:1601
-#: src/assets/model/assetparametermodel.cpp:1648
+#: src/assets/model/assetparametermodel.cpp:1621
+#: src/assets/model/assetparametermodel.cpp:1668
 #, kde-format
 msgid "Cannot open preset file %1"
 msgstr "No s'ha pogut obrir el fitxer %1 de valors predefinits"
 
-#: src/assets/model/assetparametermodel.cpp:1738
+#: src/assets/model/assetparametermodel.cpp:1758
 #, kde-format
 msgctxt "@info:status"
 msgid "Failed to load preset %1"
@@ -20208,7 +20196,7 @@ msgstr "<b>%1</b> clips | "
 msgid "<b>%1</b> clips (%2 selected) | "
 msgstr "<b>%1</b> clips (%2 seleccionats) | "
 
-#: src/bin/bin.cpp:6294 src/bin/bin.cpp:6371
+#: src/bin/bin.cpp:6294 src/bin/bin.cpp:6372
 #, kde-format
 msgid "Add additional stream for clip"
 msgid_plural "Add additional streams for clip"
@@ -20229,52 +20217,52 @@ msgstr ""
 "Fluxos addicionals per al clip\n"
 " %1"
 
-#: src/bin/bin.cpp:6330 src/mltcontroller/clippropertiescontroller.cpp:754
+#: src/bin/bin.cpp:6331 src/mltcontroller/clippropertiescontroller.cpp:754
 #, kde-format
 msgid "Video stream %1"
 msgstr "Flux de vídeo %1"
 
-#: src/bin/bin.cpp:6345
+#: src/bin/bin.cpp:6346
 #, kde-format
 msgid "Audio stream %1"
 msgstr "Flux d'àudio %1"
 
-#: src/bin/bin.cpp:6398
+#: src/bin/bin.cpp:6399
 #, kde-format
 msgid "Remove clip markers"
 msgstr "Elimina els marcadors dels clips"
 
-#: src/bin/bin.cpp:6595
+#: src/bin/bin.cpp:6596
 #, kde-format
 msgctxt "@label:textbox"
 msgid "We recommend that you save the project before the transcode operation"
 msgstr ""
 "Us recomanem que deseu el projecte abans de l'operació de transcodificació"
 
-#: src/bin/bin.cpp:6596
+#: src/bin/bin.cpp:6597
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Project"
 msgstr "Desa el projecte"
 
-#: src/bin/bin.cpp:6597
+#: src/bin/bin.cpp:6598
 #, kde-format
 msgctxt "@action:button"
 msgid "Transcode Without Saving"
 msgstr "Transcodificació sense desar"
 
-#: src/bin/bin.cpp:6755 src/effects/effectstack/model/effectstackmodel.cpp:198
+#: src/bin/bin.cpp:6756 src/effects/effectstack/model/effectstackmodel.cpp:198
 #: src/timeline2/model/timelineitemmodel.cpp:1125
 #, kde-format
 msgid "Delete effect %1"
 msgstr "Suprimeix l'efecte %1"
 
-#: src/bin/bin.cpp:6821 src/mainwindow.cpp:264
+#: src/bin/bin.cpp:6822 src/mainwindow.cpp:264
 #, kde-format
 msgid "Project Bin"
 msgstr "Safata del projecte"
 
-#: src/bin/bin.cpp:6824 src/bin/bin.cpp:6827 src/mainwindow.cpp:5259
+#: src/bin/bin.cpp:6825 src/bin/bin.cpp:6828 src/mainwindow.cpp:5259
 #, kde-format
 msgid "Project Bin %1"
 msgstr "Safata del projecte %1"
@@ -28355,10 +28343,9 @@ msgid "Delete Timeline Marker"
 msgstr "Suprimeix el marcador de la línia de temps"
 
 #: src/mainwindow.cpp:2141
-#, fuzzy, kde-format
-#| msgid "Delete Timeline Marker"
+#, kde-format
 msgid "Delete All Timeline Markers"
-msgstr "Suprimeix el marcador de la línia de temps"
+msgstr "Suprimeix tots els marcadors de la línia de temps"
 
 #: src/mainwindow.cpp:2143
 #, kde-format
@@ -33720,7 +33707,7 @@ msgstr "Mou el clip"
 
 #: src/timeline2/model/timelinemodel.cpp:1888
 #: src/timeline2/model/timelinemodel.cpp:1982
-#: src/timeline2/model/timelinemodel.cpp:2006
+#: src/timeline2/model/timelinemodel.cpp:2005
 #: src/timeline2/model/timelinemodel.cpp:2034
 #: src/timeline2/view/timelinecontroller.cpp:3437
 #, kde-format
@@ -33737,7 +33724,7 @@ msgstr "Insereix un clip"
 msgid "You cannot insert a sequence containing itself"
 msgstr "No es pot afegir una seqüència que es contingui a si mateixa"
 
-#: src/timeline2/model/timelinemodel.cpp:1999
+#: src/timeline2/model/timelinemodel.cpp:1998
 #: src/timeline2/model/timelinemodel.cpp:2026
 #: src/timeline2/model/timelinemodel.cpp:2054
 #, kde-format
@@ -36259,13 +36246,14 @@ msgstr "Evita el repòs en reproduir o renderitzar"
 #: src/ui/configenv_ui.ui:128
 #, kde-format
 msgid "Drag window from titlebar only"
-msgstr ""
+msgstr "Arrossega la finestra només des de la barra de títol"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: src/ui/configenv_ui.ui:135
 #, kde-format
 msgid "This will apply to all KDE applications using the Breeze style."
 msgstr ""
+"Això s'aplicarà a totes les aplicacions de KDE que utilitzin l'estil Brisa."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: src/ui/configenv_ui.ui:161
